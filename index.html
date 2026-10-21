@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Explorer</title>
+
+  <!-- Links your HTML to your CSS file -->
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Planet Logo" class="logo-icon">
+        <h2>planet</h2>
+      </div>
+
+      <button id="theme-btn" class="theme-toggle" aria-label="Toggle dark mode">
+        DARK <img src="assets/moon.svg" alt="Moon icon" class="moon-icon">
+      </button>
+    </div>
+
+    <form id="search-form" class="search-bar">
+      <div class="input-group">
+        <img src="assets/search.svg" alt="Search" class="search-icon">
+        <input type="text" id="planet-search" placeholder="Search planet name..." required>
+      </div>
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- Main Planet Card -->
+    <article class="planet-card">
+      <!-- Top Section: Image on left, Details on right -->
+      <div class="planet-intro">
+        <img src="assets/earth.png" alt="Planet Earth" id="planet-image">
+
+        <div class="planet-details">
+          <div class="planet-header">
+            <h1 id="planet-name">Earth</h1>
+            <h2 id="planet-type" class="text-blue">Terrestrial</h2>
+          </div>
+          <p id="planet-description">
+            The only known planet to support life, with liquid water on its surface.
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle Section: Gravity, Mass, Period Block -->
+      <div class="planet-metrics">
+        <div class="metric">
+          <span class="label">Gravity</span>
+          <strong id="planet-gravity">9.8</strong>
+        </div>
+        <div class="metric">
+          <span class="label">Mass</span>
+          <strong id="planet-mass">0.00315</strong>
+        </div>
+        <div class="metric">
+          <span class="label">Period</span>
+          <strong id="planet-period">365</strong>
+        </div>
+      </div>
+
+      <!-- Bottom Section: Quick Stats Grid -->
+      <div class="planet-stats-grid">
+        <div class="stat">
+          <img src="assets/temp.svg" alt="Temperature" class="stat-icon">
+          <span id="planet-temp">288</span>
+        </div>
+        <div class="stat">
+          <img src="assets/moons.svg" alt="Moons" class="stat-icon">
+          <span id="planet-moons">1</span>
+        </div>
+        <div class="stat">
+          <img src="assets/diameter.svg" alt="Diameter" class="stat-icon">
+          <span id="planet-diameter">12756</span>
+        </div>
+        <div class="stat">
+          <img src="assets/distance.svg" alt="Distance" class="stat-icon">
+          <span id="planet-distance">149.6</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Planetary Facts Table Section -->
+    <section class="planetary-facts">
+      <h2>Planetary Facts at a Glance</h2>
+      <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties
+        used by astronomers and researchers worldwide.</p>
+      <p class="table-caption"><strong>Data about the planets of our solar system (Planetary facts taken from
+          NASA)</strong></p>
+
+      <div class="table-wrapper">
+        <table class="planet-data-table">
+          <thead>
+            <tr>
+              <th colspan="2" class="empty-cell"></th>
+              <th>Name</th>
+              <th>Mass (10<sup>24</sup>kg)</th>
+              <th>Diameter (km)</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- Terrestrial Planets Group -->
+            <tr>
+              <td rowspan="4" colspan="2" class="category-cell">Terrestrial<br>Planets</td>
+              <td>Mercury</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <td>Venus</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <td>Earth</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <td>Mars</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+
+            <!-- Jovian Planets Group -->
+            <tr>
+              <td rowspan="4" class="category-cell">Jovian<br>Planets</td>
+              <td rowspan="2" class="subcategory-cell">Gas Giants</td>
+              <td>Jupiter</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <td>Saturn</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <td rowspan="2" class="subcategory-cell">Ice Giants</td>
+              <td>Uranus</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+            <tr>
+              <td>Neptune</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+
+            <!-- Dwarf Planets Group -->
+            <tr>
+              <td colspan="2" class="category-cell">Dwarf Planets</td>
+              <td>Pluto</td>
+              <td>0.330</td>
+              <td>4,878</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-about">
+      <h3>About</h3>
+      <p>first name of group members</p>
+    </div>
+
+    <div class="footer-links">
+      <p>©2026 Design by <a href="https://amakandukwu.com" target="_blank">Amaka N</a></p>
+      <p>Built by <a href="#" target="_blank">GroupName</a>. All rights reserved</p>
+      <p><a href="https://tsacademyonline.com/" target="_blank">TSAcademy</a></p>
+    </div>
+  </footer>
+
+  <script src="script/script.js"></script>
+
+</body>
+
+</html>

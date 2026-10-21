@@ -1,0 +1,507 @@
+/* =========================================
+   1. Base Variables & Global Styles
+   ========================================= */
+:root {
+  --bg-color: #f4f6fa;
+  --card-bg: #ffffff;
+  --primary-blue: #0066ff;
+  --text-dark: #1a1a1a;
+  --text-light: #667085;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  padding: 40px 5vw;
+}
+
+/* =========================================
+   2. Header & Search Bar Layout
+   ========================================= */
+.site-header {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: auto;
+}
+
+.logo h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-light);
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.moon-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.search-bar {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 8px 12px 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+#planet-search {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--text-dark);
+  width: 100%;
+}
+
+.search-btn {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.search-btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================================
+   3. Main Content & Planet Card (Desktop)
+   ========================================= */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.planet-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.planet-intro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+#planet-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.planet-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.planet-header h1 {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.text-blue {
+  color: var(--primary-blue);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+#planet-description {
+  color: var(--text-light);
+  max-width: 450px;
+  margin: 0;
+  text-align: left;
+}
+
+/* Middle Metrics Box */
+.planet-metrics {
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  width: fit-content;
+  margin: 0 auto 40px auto;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric .label {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.metric strong {
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+/* Bottom Quick Stats Grid */
+.planet-stats-grid {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  column-gap: 120px;
+  row-gap: 25px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.stat-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================
+   4. Table & Footer Section
+   ========================================= */
+.planetary-facts h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.planetary-facts p {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+.table-caption {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.table-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 50px;
+}
+
+.planet-data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.planet-data-table th,
+.planet-data-table td {
+  padding: 16px;
+  font-size: 14px;
+}
+
+.planet-data-table thead th {
+  background-color: #1a4ab9;
+  color: #ffffff;
+  font-weight: 600;
+  border: 1px solid #1a4ab9;
+}
+
+.planet-data-table thead th.empty-cell {
+  background-color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+}
+
+.category-cell {
+  background-color: #b5c7ff;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.subcategory-cell {
+  background-color: #d1dcff;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Footer Layout */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 30px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.footer-about h3 {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.footer-links p {
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* =========================================
+   5. Dark Mode Overrides
+   ========================================= */
+body.dark-theme {
+  background-color: #171b29;
+  color: #ffffff;
+}
+
+body.dark-theme .planet-card,
+body.dark-theme .search-bar {
+  background-color: #1f2537;
+}
+
+body.dark-theme .planet-metrics {
+  background-color: #171b29;
+}
+
+body.dark-theme #planet-search {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+body.dark-theme #planet-search::placeholder {
+  color: #8c96b5;
+}
+
+body.dark-theme #planet-description,
+body.dark-theme .metric .label,
+body.dark-theme .planet-header h2,
+body.dark-theme .planetary-facts p,
+body.dark-theme .table-caption,
+body.dark-theme .theme-toggle {
+  color: #8c96b5;
+}
+
+body.dark-theme .logo-icon,
+body.dark-theme .stat-icon,
+body.dark-theme .search-icon,
+body.dark-theme .moon-icon {
+  filter: invert(1) brightness(2);
+}
+
+body.dark-theme #planet-name,
+body.dark-theme .metric strong,
+body.dark-theme .stat,
+body.dark-theme .planetary-facts h2,
+body.dark-theme .table-caption strong {
+  color: #ffffff;
+}
+
+/* Dark Mode Table Overrides */
+body.dark-theme .table-wrapper {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+}
+
+body.dark-theme .planet-data-table thead th {
+  background-color: #171b29;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+/* Added: Targets the empty top-left header cell in dark mode */
+body.dark-theme .planet-data-table thead th.empty-cell {
+  background-color: #171b29 !important;
+  border: 1px solid #ffffff !important;
+}
+
+body.dark-theme .planet-data-table td {
+  border: 1px solid #ffffff;
+  color: #000000;
+}
+
+/* =========================================
+   6. Mobile Responsiveness (Figma Match)
+   ========================================= */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 20px 16px;
+  }
+
+  .search-bar {
+    padding: 6px 12px;
+  }
+
+  .search-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .planet-card {
+    padding: 24px 20px;
+    text-align: left !important;
+  }
+
+  .planet-intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  #planet-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  .planet-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex: 1;
+    min-width: 160px;
+  }
+
+  .planet-header h1 {
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .planet-header h2 {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  #planet-description {
+    width: 100% !important;
+    text-align: left !important;
+    margin-top: 8px !important;
+    font-size: 14px;
+  }
+
+  .planet-metrics {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 16px;
+    padding: 20px;
+    margin: 0 0 24px 0;
+  }
+
+  .metric {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .metric .label {
+    font-size: 13px;
+  }
+
+  .metric strong {
+    font-size: 22px;
+  }
+
+  .planet-stats-grid {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    justify-content: start;
+  }
+
+  .stat {
+    justify-content: flex-start;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .footer-links p {
+    text-align: left;
+  }
+}
